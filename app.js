@@ -16,8 +16,23 @@ document.addEventListener('DOMContentLoaded',()=>{
     let intervalTime = 0
     let interval = 0
 
+    // setting up keycodes functions to move with keyboard
+    function control(e) {
+        squares[currentIndex].classlist.remove('snake')
     
-
+    if(e.keycode === 39){
+        direction = 1
+    } // right one square
+    else if (e.keycode === 38){
+        direction = -width 
+    } // up movement ten
+    else if (e.keycode === 37){
+        direction = -1 
+    } // left one square
+    else if (e.keycode === 40){
+        direction = +width
+    } // down movement ten 
+   }
 
 
 
