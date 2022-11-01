@@ -33,7 +33,21 @@ document.addEventListener('DOMContentLoaded',()=>{
         direction = +width
     } // down movement ten 
    }
+document.addEventListener('keyup', control)
 
 
+// start and restart setup
+function startGame(){
+    currentSnake.forEach(index => squares[index].classList.remove('snake'))
+    squares[appleIndex].classList.remove('apple')
+    clearInterval(interval)
+    score = 0 //setting up restart
+    direction = 1
+    scoreDisplay.innerText = score
+    intervalTime = 1000
+    currentSnake = [2,1,0]
+    currentIndex = 0
+    currentSnake.forEach(index => squares[index].classList.add('snake'))
+}
 
 })
